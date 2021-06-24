@@ -1,13 +1,16 @@
 CREATE TABLE STADIUM (
 	Stadium_id varchar(10) NOT NULL UNIQUE,
 	Name varchar(10) NOT NULL,
-	Capacity varchar(10) NOT NULL
+	Capacity varchar(10) NOT NULL,
+
+	CONSTRAINT Stadium_PK
+		PRIMARY KEY (Stadium_id)
 )
 
 CREATE TABLE SEAT (
 	Stadium_id varchar(10) NOT NULL,
 	type varchar(10) NOT NULL,
-	Price float NOT NULL,
+	Price int NOT NULL,
 
 	CONSTRAINT Seat_PK
 		PRIMARY KEY (Stadium_id,type),
