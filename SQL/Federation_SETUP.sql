@@ -30,10 +30,10 @@ CREATE TABLE JUDGE (
         CHECK (0 <= Score <= 10),
     CONSTRAINT Ref_Positions
         CHECK (
-			Position in
-               ('Referee', 'HeadLinesman', 'LineJudge', 'Umpire',
-                'BackJudge', 'SideJudge', 'FieldJudge')
-            )
+		Position in
+               		('Referee', 'HeadLinesman', 'LineJudge', 'Umpire',
+                	'BackJudge', 'SideJudge', 'FieldJudge')
+        )
 )
 
 CREATE TABLE SUPERVISOR (
@@ -89,8 +89,8 @@ CREATE TABLE PLAYED (
         CHECK (0 <= Score <= 10),
     CONSTRAINT Positions
         CHECK (
-			Position in ('GK', 'SW', 'CB', 'LB', 'LWB', 'RB','RWB',
-                         'DM', 'CM', 'AM', 'LW', 'RW', 'S', 'CF')
+		Position in ('GK', 'SW', 'CB', 'LB', 'LWB', 'RB','RWB',
+                		'DM', 'CM', 'AM', 'LW', 'RW', 'S', 'CF')
             )
 )
 
